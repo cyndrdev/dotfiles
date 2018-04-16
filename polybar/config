@@ -1,0 +1,84 @@
+[geometry]
+include-file = $HOME/.config/polybar/geometry
+
+[bar/main]
+width=${geometry.width}
+height=${geometry.height}
+offset-x=${geometry.offset-x}
+offset-y=${geometry.offset-y}
+
+; width=1860
+; height=24
+; offset-x=30
+; offset-y=30
+
+wm-restack = bspwm
+
+background=${xrdb:color0:#000}
+foreground=${xrdb:color15:#000}
+
+border-bottom-size=5
+border-bottom-color=${xrdb:color2:#000}
+border-top-size=6
+border-top-color=${xrdb:color0:#000}
+
+font-0=tewi:pixelsize=8;0
+font-1=JackeyFont:pixelsize=9;4
+
+modules-left = bspwm xwindow
+modules-right = cmus hackspeed cpu date
+module-margin = 2
+
+padding-left = 2
+padding-right = 2
+
+[module/bspwm]
+type=internal/bspwm
+label-focused = " %{O-4}%name%"
+label-focused-padding = 1
+
+label-focused-background=${xrdb:color2:#000}
+label-focused-foreground=${xrdb:color0:#000}
+
+border-color = ${xrdb:color1:#000}
+label-unfocused =
+label-occupied =
+label-empty =
+
+[module/date]
+type=internal/date
+interval = 1.0
+
+date = %Y-%m-%d%
+time = %H:%M
+
+label = %date% %time%
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+
+format = <ramp-load>
+
+ramp-load-0 = ^u^
+ramp-load-1 = -U-
+ramp-load-2 = o_o
+ramp-load-3 = >-<
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:110:...%
+
+[module/cmus]
+type = custom/script
+
+exec = bash ~/.config/polybar/cmus.sh
+exec-if = pgrep -x cmus
+interval = 1
+
+click-left = cmus-remote -u
+
+[module/hackspeed]
+type = custom/script
+exec = bash ~/.config/polybar/hackspeed.sh
+tail = true

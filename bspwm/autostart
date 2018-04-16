@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+sxhkd &
+wal -R &
+start-pulseaudio-x11 &
+compton --config $HOME/.config/compton.conf &
+. "$HOME/.config/polybar/launch.sh" &
+. "$HOME/.config/dunst/launch.sh" &
