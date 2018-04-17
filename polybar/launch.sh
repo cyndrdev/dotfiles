@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-config = "${XDG_CONFIG_HOME:-$HOME/.config}/polybar"
+config="${XDG_CONFIG_HOME:-$HOME/.config}/polybar"
 
 rm $config/geometry
 ln -s $config/geometry-gaps $config/geometry

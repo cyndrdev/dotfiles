@@ -22,6 +22,7 @@ bspc rule -a URxvt:scratch state=floating rectangle=800x600+560+300 sticky=on
 # bspc rule -a mplayer2 state=floating
 # bspc rule -a Kupfer.py focus=on
 # bspc rule -a Screenkey manage=off
+bspc rule -a discord:* desktop='^10' state=fullscreen
 
 # generic rules
 bspc rule -a Dialog state=floating
@@ -36,5 +37,5 @@ if [ "$1" = "reload" ]; then
 	echo "reloaded config."
 else
 	"$BSPWM_CONFIG/autostart" &
-	"$BSPWM_CONFIG/toggle_gaps.sh" &
+	"$HOME/.scripts/toggle-gaps.sh" gaps &
 fi

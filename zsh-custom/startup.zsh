@@ -1,1 +1,1 @@
-ufetch-core && echo
+ufetch-core && printf "\n\n"

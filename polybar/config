@@ -23,7 +23,9 @@ border-top-size=6
 border-top-color=${xrdb:color0:#000}
 
 font-0=tewi:pixelsize=8;0
-font-1=JackeyFont:pixelsize=9;4
+font-1=tewifw:pixelsize=8;0
+font-2=tewihm:pixelsize=8;0
+font-3=JackeyFont:pixelsize=9;4
 
 modules-left = bspwm xwindow
 modules-right = cmus hackspeed cpu date
@@ -31,6 +33,8 @@ module-margin = 2
 
 padding-left = 2
 padding-right = 2
+
+; tray-position = right
 
 [module/bspwm]
 type=internal/bspwm

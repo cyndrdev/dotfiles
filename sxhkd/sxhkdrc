@@ -18,9 +18,10 @@ super + b
 super + r
 	rofi -show run
 
-# make sxhkd reload its configuration files:
+# make sxhkd and bspwm reload their configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd && \
+	$HOME/.config/bspwm/bspwmrc reload
 
 #
 # bspwm hotkeys
@@ -155,7 +156,7 @@ super + {Left,Down,Up,Right}
 #
 
 super + KP_{0,Insert}
-	$HOME/.config/bspwm/toggle_gaps.sh
+	$HOME/.scripts/toggle-gaps.sh
 
 super + KP_{1,End}
 	$HOME/.scripts/toggle-compositor.sh
@@ -164,7 +165,7 @@ super + KP_{2,Down}
 	$HOME/.scripts/emoji.sh
 
 super + KP_{3,Next}
-	echo
+	$HOME/.scripts/ufetch-rice
 
 super + KP_{4,Left}
 	echo
@@ -188,7 +189,7 @@ super + KP_{Decimal,Delete}
 	echo
 
 super + KP_Enter
-	$HOME/.config/bspwm/lightswitch.sh
+	$HOME/.scripts/lightswitch.sh
 
 super + KP_Add
 	echo
@@ -201,3 +202,6 @@ super + KP_Multiply
 
 super + KP_Divide
 	echo
+
+Print
+	$HOME/.scripts/screenshot.sh
