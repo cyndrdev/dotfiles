@@ -8,7 +8,7 @@ super + Return
 
 # terminal scratchpad
 super + shift + Return
-	$HOME/.config/bspwm/scratch.sh
+	$HOME/.scripts/scratch.sh
 
 # web browser
 super + b
@@ -205,3 +205,22 @@ super + KP_Divide
 
 Print
 	$HOME/.scripts/screenshot.sh
+
+#
+# razer macro keys
+#
+
+XF86Tools
+    $HOME/.scripts/toggle-gaps.sh
+
+XF86Launch5
+    $HOME/.scripts/toggle-compositor.sh
+
+XF86Launch6
+    $HOME/.scripts/lightswitch.sh
+
+XF86Launch7
+    $HOME/.scripts/emoji.sh
+
+XF86Launch8
+    $HOME/.scripts/ufetch-rice
