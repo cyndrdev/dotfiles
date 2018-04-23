@@ -9,6 +9,24 @@ $XONSH_STORE_STDOUT = True
 # === aliases === #
 aliases['cmus'] = "cmus_launch.sh"
 
+# ls shorthands
+aliases['l'] = "ls -lFh"
+aliases['la'] = "ls -lAFh"
+aliases['lr'] = "ls -tRFh"
+aliases['lt'] = "ls -ltFh"
+aliases['ll'] = "ls -l"
+aliases['lS'] = "ls -1FSsh"
+aliases['lart'] = "ls -1Fcart"
+aliases['lrt'] = "ls -1Fcrt"
+
+# color shorthands
+aliases['grep'] = "grep --color"
+
+# interactive mode for file manipulations
+aliases['rm'] = "rm -i"
+aliases['cp'] = "cp -i"
+aliases['mv'] = "mv -i"
+
 # === functions === #
 
 # === startup === #
