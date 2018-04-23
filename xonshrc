@@ -1,0 +1,16 @@
+# === environment variables === #
+$PATH.append('$HOME/.scripts')
+$SHELL = "xonsh"
+$PROMPT = '{hostname} {BOLD_PURPLE}:: {BOLD_GREEN}{cwd}{curr_branch: [{}]} {BOLD_BLUE}% {NO_COLOR}'
+$MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
+$XONSH_SHOW_TRACEBACK = True
+$XONSH_STORE_STDOUT = True
+
+# === aliases === #
+aliases['cmus'] = "cmus_launch.sh"
+
+# === functions === #
+
+# === startup === #
+ufetch-core
+print("\n\n")
