@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-sxhkd &
-wal -R &
-start-pulseaudio-x11 &
-compton --config $HOME/.config/compton.conf &
-. "$HOME/.config/polybar/launch.sh" &
-. "$HOME/.config/dunst/launch.sh" &
+sxhkd &                                         # enable keybinds
+wal -R &                                        # set wallpaper & theme
+start-pulseaudio-x11 &                          # make audio work
+compton --config $HOME/.config/compton.conf &   # start compositor
+redshift -l 51.5:0 &                            # make our eyes less strained
+. "$HOME/.config/polybar/launch.sh" &           # useful system info
+. "$HOME/.config/dunst/launch.sh" &             # useful notifications
